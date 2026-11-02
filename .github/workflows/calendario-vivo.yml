@@ -1,0 +1,67 @@
+
+name: Atualizar Calendário Vivo
+
+on:
+  schedule:
+    - cron: "5 3 * * *"
+
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  atualizar-banner:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Baixar repositório da automação
+        uses: actions/checkout@v4
+
+      - name: Baixar perfil
+        uses: actions/checkout@v4
+        with:
+          repository: d-ribeiro-dev/d-ribeiro-dev
+          token: ${{ secrets.PERFIL_TOKEN }}
+          path: perfil
+
+      - name: Preparar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Preparar README do perfil
+        run: cp perfil/README.md README.md
+
+      - name: Executar calendário
+        run: python datas-festivas/atualizar_calendario.py
+
+      - name: Atualizar README do perfil
+        run: cp README.md perfil/README.md
+
+      - name: Diagnosticar repositório do perfil
+        run: |
+          echo "=== PASTA DO PERFIL ==="
+          pwd
+          git -C perfil rev-parse --show-toplevel
+
+          echo "=== REMOTE DO PERFIL ==="
+          git -C perfil remote -v
+
+          echo "=== REMOTE DA AUTOMACAO ==="
+          git remote -v
+
+      - name: Salvar alterações no perfil
+        working-directory: perfil
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add README.md
+
+          if ! git diff --cached --quiet; then
+            git commit -m "Atualiza banner do Calendário Vivo"
+            git push
+          else
+            echo "Nenhuma alteração no README."
+          fi
