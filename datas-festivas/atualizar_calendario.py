@@ -21,6 +21,10 @@ CELEBRACOES = {
         "nome": "Dia de Finados",
         "imagem": "banners/finados/finados.png",
     },
+    (11, 10): {
+        "nome": "Dia Mundial da Ciência pela Paz e pelo Desenvolvimento",
+        "imagem": "banners/ciencia/dia-mundial-da-ciencia.svg",
+    },
 }
 
 # Marcadores da area automatica do README
@@ -54,6 +58,7 @@ def testar_selecao():
         date(2026, 10, 31),
         date(2026, 11, 1),
         date(2026, 11, 2),
+        date(2026, 11, 10),
     ]
 
     for data_teste in datas_teste:
