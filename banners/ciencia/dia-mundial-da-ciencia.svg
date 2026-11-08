@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="600" viewBox="0 0 1600 600" role="img" aria-labelledby="title desc">
+  <title id="title">Dia Mundial da Ciência pela Paz e pelo Desenvolvimento — 10 de novembro</title>
+  <desc id="desc">Banner em tons de azul e violeta com planeta Terra, órbitas atômicas e frasco de laboratório, celebrando a ciência e a cooperação global.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#06152f"/>
+      <stop offset=".55" stop-color="#102e67"/>
+      <stop offset="1" stop-color="#32165f"/>
+    </linearGradient>
+    <linearGradient id="glow" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#35e7ff"/>
+      <stop offset="1" stop-color="#bd69ff"/>
+    </linearGradient>
+    <radialGradient id="earth" cx=".35" cy=".3" r=".8">
+      <stop offset="0" stop-color="#70edff"/>
+      <stop offset=".55" stop-color="#1688c9"/>
+      <stop offset="1" stop-color="#092b70"/>
+    </radialGradient>
+    <linearGradient id="glass" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#a7f7ff" stop-opacity=".9"/>
+      <stop offset="1" stop-color="#1ad9ff" stop-opacity=".25"/>
+    </linearGradient>
+    <filter id="softGlow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="12" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="1600" height="600" fill="url(#bg)"/>
+  <g fill="#d9f8ff" opacity=".7">
+    <circle cx="90" cy="85" r="3"/><circle cx="230" cy="180" r="2"/><circle cx="390" cy="70" r="2"/>
+    <circle cx="560" cy="130" r="3"/><circle cx="730" cy="55" r="2"/><circle cx="1460" cy="80" r="3"/>
+    <circle cx="1510" cy="220" r="2"/><circle cx="1330" cy="510" r="2"/><circle cx="100" cy="500" r="2"/>
+  </g>
+  <g opacity=".65" fill="none" stroke="url(#glow)" stroke-width="3">
+    <ellipse cx="360" cy="280" rx="245" ry="95" transform="rotate(-28 360 280)"/>
+    <ellipse cx="360" cy="280" rx="245" ry="95" transform="rotate(35 360 280)"/>
+    <ellipse cx="360" cy="280" rx="245" ry="95" transform="rotate(90 360 280)"/>
+  </g>
+  <circle cx="360" cy="280" r="115" fill="url(#earth)" filter="url(#softGlow)"/>
+  <path d="M290 220l35-27 35 10 17 32-24 22-8 39-35 12-20-35-28-8zM390 310l32-12 26 25-14 42-34 14-24-34z" fill="#68d59c" opacity=".9"/>
+  <path d="M265 300c38 20 62 27 103 22 44-5 76-23 104-47" fill="none" stroke="#b8f7ff" stroke-width="5" opacity=".45"/>
+  <g transform="translate(160 440)" filter="url(#softGlow)">
+    <path d="M80 0h75v24l-12 18v76c0 26-20 46-46 46H54c-26 0-46-20-46-46V42L-4 24V0h84" fill="none" stroke="#8defff" stroke-width="8" stroke-linejoin="round"/>
+    <path d="M17 91h116v27c0 18-15 33-33 33H50c-18 0-33-15-33-33z" fill="url(#glass)"/>
+    <path d="M25 102c24-12 42 11 63 0s32 1 42-5" fill="none" stroke="#d8ffff" stroke-width="5"/>
+    <circle cx="63" cy="119" r="6" fill="#e5fdff"/><circle cx="99" cy="133" r="4" fill="#e5fdff"/>
+  </g>
+  <g transform="translate(590 105)" fill="none" stroke="#5deaff" stroke-width="5" opacity=".9">
+    <ellipse cx="0" cy="0" rx="90" ry="30"/><ellipse cx="0" cy="0" rx="90" ry="30" transform="rotate(60)"/><ellipse cx="0" cy="0" rx="90" ry="30" transform="rotate(120)"/>
+    <circle r="11" fill="#d8fbff" stroke="none"/>
+  </g>
+  <g transform="translate(810 0)">
+    <text x="0" y="125" fill="#9defff" font-family="Arial, sans-serif" font-size="28" font-weight="700" letter-spacing="5">10 DE NOVEMBRO</text>
+    <text x="0" y="235" fill="#ffffff" font-family="Arial, sans-serif" font-size="88" font-weight="800">DIA MUNDIAL DA</text>
+    <text x="0" y="340" fill="url(#glow)" font-family="Arial, sans-serif" font-size="112" font-weight="900">CIÊNCIA</text>
+    <text x="4" y="402" fill="#ffffff" font-family="Arial, sans-serif" font-size="40" font-weight="600">pela Paz e pelo Desenvolvimento</text>
+    <path d="M5 435h690" stroke="url(#glow)" stroke-width="5" stroke-linecap="round"/>
+    <text x="5" y="490" fill="#e4f7ff" font-family="Arial, sans-serif" font-size="29">Conhecimento que aproxima pessoas e transforma o mundo.</text>
+    <text x="5" y="545" fill="#a8c7ed" font-family="Arial, sans-serif" font-size="20" letter-spacing="2">CIÊNCIA • COOPERAÇÃO • FUTURO SUSTENTÁVEL</text>
+  </g>
+</svg>
