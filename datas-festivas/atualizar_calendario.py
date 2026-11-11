@@ -11,6 +11,7 @@ REPOSITORIO = (
     "d-ribeiro-dev/calendario-vivo-github/main"
 )
 
+
 # Datas e caminhos das imagens cadastradas
 CELEBRACOES = {
     (10, 31): {
@@ -25,7 +26,16 @@ CELEBRACOES = {
         "nome": "Dia Mundial da Ciência pela Paz e pelo Desenvolvimento",
         "imagem": "banners/ciencia/dia-mundial-da-ciencia.svg",
     },
+    (11, 15): {
+        "nome": "Proclamação da República",
+        "imagem": "banners/proclamacao-republica.png",
+    },
+    (11, 20): {
+        "nome": "Dia Nacional de Zumbi e da Consciência Negra",
+        "imagem": "banners/consciencia-negra.png",
+    },
 }
+
 
 # Marcadores da area automatica do README
 INICIO = "<!-- CALENDARIO-VIVO:INICIO -->"
@@ -59,6 +69,8 @@ def testar_selecao():
         date(2026, 11, 1),
         date(2026, 11, 2),
         date(2026, 11, 10),
+        date(2026, 11, 15),
+        date(2026, 11, 20),
     ]
 
     for data_teste in datas_teste:
@@ -87,7 +99,9 @@ def atualizar_readme(caminho_readme=None, data_teste=None):
 
     # Define o README principal ou um arquivo de teste.
     if caminho_readme is None:
-        caminho_readme = Path(__file__).resolve().parent.parent / "README.md"
+        caminho_readme = (
+            Path(__file__).resolve().parent.parent / "README.md"
+        )
     else:
         caminho_readme = Path(caminho_readme)
 
@@ -114,7 +128,7 @@ def atualizar_readme(caminho_readme=None, data_teste=None):
     if celebracao:
         url_imagem = f"{REPOSITORIO}/{celebracao['imagem']}"
 
-    # Se a imagem nao estiver acessivel, interrompe antes de escrever.
+        # Se a imagem nao estiver acessivel, interrompe antes de escrever.
         verificar_imagem(url_imagem)
 
         bloco = (
@@ -123,7 +137,7 @@ def atualizar_readme(caminho_readme=None, data_teste=None):
             f'<img src="{url_imagem}" '
             f'alt="Banner de {celebracao["nome"]}" width="100%">\n\n'
             "</div>\n\n"
-       )
+        )
 
     # Preserva todo o conteudo fora da area automatica.
     novo_conteudo = (
