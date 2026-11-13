@@ -26,6 +26,10 @@ CELEBRACOES = {
         "nome": "Dia Mundial da Ciência pela Paz e pelo Desenvolvimento",
         "imagem": "banners/ciencia/dia-mundial-da-ciencia.svg",
     },
+    (11, 13): {
+        "nome": "Sexta-feira 13",
+        "imagem": "banners/Sexta-feira-13.png",
+    },
     (11, 15): {
         "nome": "Proclamação da República",
         "imagem": "banners/proclamacao-republica.png",
@@ -69,6 +73,7 @@ def testar_selecao():
         date(2026, 11, 1),
         date(2026, 11, 2),
         date(2026, 11, 10),
+        date(2026, 11, 13),
         date(2026, 11, 15),
         date(2026, 11, 20),
     ]
