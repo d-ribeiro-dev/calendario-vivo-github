@@ -38,6 +38,18 @@ CELEBRACOES = {
         "nome": "Dia Nacional de Zumbi e da Consciência Negra",
         "imagem": "banners/consciencia-negra.png",
     },
+    (11, 25): {
+        "nome": "Dia Internacional pela Eliminação da Violência contra as Mulheres",
+        "imagem": "banners/violencia-mulher.png",
+    },
+    (12, 3): {
+        "nome": "Dia Internacional das Pessoas com Deficiência",
+        "imagem": "banners/inclusao.png",
+    },
+    (12, 10): {
+        "nome": "Dia dos Direitos Humanos",
+        "imagem": "banners/direitos-humanos.png", 
+    },    
 }
 
 
